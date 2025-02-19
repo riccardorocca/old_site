@@ -1,0 +1,440 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Author" content="Riccardo Rocca">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0"><title>roboat</title></head>
+<body>
+
+<p style="font-family: Verdana;" align="center"><font size="5"><b><u>ROBOAT</u></b></font> </p>
+
+<p><br>
+</p>
+
+<table border="1" cols="2" width="98%">
+    <tbody><tr>
+        <td><img src="roboat.jpg" height="381" width="582"></td>
+        <td><blockquote>
+            <p align="center">&nbsp; </p>
+            <p align="center"><font face="Arial,Helvetica" size="4">This project aims at testing
+            the feasibility of driving an object using a GPS and
+            a digital compass.</font> </p>
+            <p style="font-family: Verdana;"><small>In this case the object is a model boat that can
+            sail autonomously along a course planned in advance.
+            This explains the meaning of "Roboat" that
+            is the short form for "robot boat". </small></p>
+            <p style="font-family: Verdana;"><small>The project was built in order to take part in the
+            "Design99
+            Contest", organized by the magazine <a href="http://www.circuitcellar.com">"Circuit
+            Cellar"</a> <br>
+            For this purpose the project had to be developed
+            using the new microcontroller "MC68HC908GP20"
+            produced by Motorola.</small></p>
+            <p style="font-family: Verdana;"><small>ROBOAT eventually won a first prize in the contest
+            <a href="http://www.circuitcellar.com/d99winners">(see
+            link)</a>.</small></p>
+        </blockquote>
+        </td>
+    </tr>
+</tbody></table>
+
+<p style="font-family: Verdana;"><small><br>
+</small></p>
+
+<ul style="font-family: Verdana;"><small>
+    </small><li><p align="left"><small><a href="#Main%20components"><font size="3"><small>Main
+        components</small></font></a></small></p><small>
+    </small></li><small>
+    </small><li><p align="left"><small><a href="#Mechanical%20assembly"><font size="3"><small>Mechanical assembly</small></font></a></small></p><small>
+    </small></li><small>
+    </small><li><p align="left"><small><a href="#Project%20test%20and%20test%20area"><font size="3"><small>Project test and test area</small></font></a></small></p><small>
+    </small></li><small>
+    </small><li><p align="left"><small><a href="#GPS"><font size="3"><small>GPS</small></font></a></small></p><small>
+    </small></li><small>
+    </small><li><p align="left"><small><a href="#Digital%20compass"><font size="3"><small>Digital
+        compass</small></font></a></small></p><small>
+    </small></li><small>
+    </small><li><p align="left"><small><a href="#Proportional%20servo"><font size="3"><small>Proportional servo</small></font></a></small></p><small>
+    </small></li><small>
+    </small><li><p align="left"><small><a href="#Electronic%20circuit%20description"><font size="3"><small>Electronic circuit</small></font></a></small></p><small>
+    </small></li><small>
+    </small><li><p align="left"><small><a href="#PCB%20layout"><font size="3"><small>PCB
+        layout</small></font></a></small></p><small>
+    </small></li><small>
+    </small><li><p align="left"><small><a href="#Electronic%20parts%20list"><font size="3"><small>Electronic parts list</small></font></a></small></p><small>
+    </small></li><small>
+    </small><li><p align="left"><small><a href="#Software"><font size="3"><small>Software</small></font></a></small></p><small>
+    </small></li><small>
+    </small><li><p align="left"><small><a href="index.htm"><font size="3"><small>Back
+        to Riccardo Home Page</small></font></a></small></p><small>
+    </small></li><small>
+</small></ul>
+
+<p style="font-family: Verdana;"><small>&nbsp;</small></p>
+
+<hr style="font-family: Verdana;">
+
+<p style="font-family: Verdana;"><small>&nbsp;</small></p>
+
+<p style="font-family: Verdana;"><small><a name="Main components"></a><strong><u>Main components</u></strong></small></p>
+
+<p style="font-family: Verdana;" align="center"><small><img src="diagram.gif" border="1" height="720" width="945"> </small></p>
+
+<p style="font-family: Verdana;"><small>The core is the controller M68HC908GP20
+(the quad flat plastic pack version) that stores the coordinates
+of the waypoints to follow and according to the data received
+from the GPS and from the digital compass, controls the electric
+motor for the propeller and the proportional servo for the rudder.
+</small></p>
+
+<p style="font-family: Verdana;"><small>Three switches enable the test modes (disabling the control of
+GPS and/or compass), and a potentiometer allows to trim the
+rudder center position. </small></p>
+
+<p style="font-family: Verdana;"><small>A MON08 interface provides a connection with the ICS08GP20
+board, in order to control "Roboat" directly from a PC
+for testing purpose and when new waypoints coordinates need to be
+stored. </small></p>
+
+<p style="font-family: Verdana;"><small>A 12 Volts lead battery supplies power to the devices. The
+electric motor of the propeller is driven by 12 Volts directly,
+while the other circuits receive 5 Volts power supply through
+suitable regulators. </small></p>
+
+<hr style="font-family: Verdana;">
+
+<p style="font-family: Verdana;"><small><br>
+<b><u>&nbsp;</u></b><a name="Mechanical assembly"></a><b><u>Mechanical
+assembly</u></b> </small></p>
+
+<p style="font-family: Verdana; text-align: left;"><small>The structure of "Roboat" is very
+simple, so that it can be easily modified and adapted, therefore
+it is basically made of a sheet of polystyrene foam, 4 cm thick,
+cut in the shape of a boat, and a thin sheet of&nbsp; plastic on
+top that actually mounts all the devices: battery, electronics,
+electric motor, propeller, servo and rudder. <br>
+While sailing, all the device are covered with a case that
+protects them from water sprinklings. </small></p>
+
+<p style="font-family: Verdana;" align="center"><small><img src="assembly.gif" border="1" height="674" width="993"> </small></p>
+
+<hr style="font-family: Verdana;">
+
+<p style="font-family: Verdana;"><small><br>
+<a name="Project test and test area"></a><b><u>Project test and
+test area</u></b> </small></p>
+
+<p style="font-family: Verdana;"><small>Due to the small size and to the reduced capacity of the
+battery, a typical journey of "Roboat" is only a few
+kilometers long and needs to be done on a quiet and delimited
+area such as a lake. <br>
+The area chosen for the first test of "Roboat" was the
+lake "Idroscalo", close to Linate airport, 5 kilometers
+east of Milan, in northern Italy. <br>
+It is an artificial lake, once used for landing and take-off of&nbsp;
+seaplanes. Its dimensions are roughly 2.5 km by 100-200 m,
+elongate in direction North-South. Nowadays it is used mainly by
+oar- and sailing boats, therefore it is very quiet and safe for
+the purpose of the test. </small></p>
+
+<p style="font-family: Verdana;"><small>The journey chosen for the test is about 1.5 km long and it is
+described by 4 waypoints, with their corresponding coordinates. </small></p>
+
+<p style="font-family: Verdana;"><small><img src="map.gif" border="1" height="678" width="706"> </small></p>
+
+<hr style="font-family: Verdana;">
+
+<p style="font-family: Verdana;"><small><br>
+<a name="GPS"></a><b><u>GPS</u></b> </small></p>
+
+<p style="font-family: Verdana;"><small>GPS means "Global Positioning System". It refers to
+a modern technology that allows to immediately obtain the
+coordinates of a site on the earth surface. The system is based
+on a network of satellites that continuously transmit coded
+signals around the globe. A GPS device receives these signals,
+computes the position of the satellites and through a
+triangulation computes its own position over the earth surface.</small></p><p style="font-family: Verdana;"><small>The accuracy of this method for the basic, commercial GPSs, is
+said to be within 100 m for the 99% of the measurements collected
+in the same place during a sufficient interval of time. Therefore
+a course properly planned for "Roboat" should never
+approach any obstacle (an island or a shoreline) at a distance
+closer than 100 m. </small></p>
+
+<p><small><span style="font-family: Verdana;">The GPS device used in the projects is a </span><a style="font-family: Verdana;" href="http://www.garmin.com">Garmin</a><span style="font-family: Verdana;"> mod. GPS25-LVS, with
+the preamplified antenna GA27A. </span><br style="font-family: Verdana;"><span style="font-family: Verdana;">
+Through the serial output it sends the following string of ASCII
+data, according to the NMEA format, once every second, at a rate
+of 4800 bps:</span> </small></p>
+
+<p><tt>0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+6</tt> <br>
+<tt>0123456789012345678901234567890123456789012345678901234567890123456789</tt>
+<br>
+<tt>======================================================================</tt>
+<br>
+<tt>$GPRMC,145055,V,4453.6083,N,00944.9533,E,000.0,000.0,070399,000.3,E*7F</tt>
+</p>
+
+<p><small><span style="font-family: Verdana;">The individual elements of this string are:</span> </small></p>
+
+<p><tt>GPRMC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NMEA
+sentence type</tt> <br>
+<tt>145055&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GPS time of
+position fix (seconds)</tt> <br>
+<tt>V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+data quality: A = valid position, V = receiver warning</tt> <br>
+<tt>4453.6083&nbsp;&nbsp;&nbsp; latitude "ddMM.mmnn"</tt>
+<br>
+<tt>N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+latitude N or S hemisphere</tt> <br>
+<tt>00944.9533&nbsp;&nbsp; longitude "DddMM.mmnn"</tt> <br>
+<tt>E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+longitude E or W hemisphere</tt> <br>
+<tt>000.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; speed over
+ground (knots)</tt> <br>
+<tt>000.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; course over
+ground (0-359.9 degrees)</tt> <br>
+<tt>070399&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; date of position
+fix "ddmmyy"</tt> <br>
+<tt>000.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; magnetic
+variation direction</tt> <br>
+<tt>E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+magnetic variation E or W</tt> <br>
+<tt>7F&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+checksum byte (= byte1 eor byte2 eor byte3 eor &#8230; byte66)</tt>
+</p>
+
+<p style="font-family: Verdana;"><small>The string is terminated by the ASCII codes "13" (carriage
+return) and "10" (line feed). <br>
+&nbsp; </small></p>
+
+<p style="font-family: Verdana;"><small><a name="Digital compass"></a><b><u>Digital Compass.</u></b> </small></p>
+
+<p style="font-family: Verdana;"><small>To determine the direction Roboat is heading to (azimuth), it
+uses a Digital Compass Sensor Analog mod. 6100, distributed by <a href="mailto:pewatron@access.ch">PEWATRON</a>. <br>
+This sensor has the shape of a small cylinder 15 mm high and 13
+mm in diameter, and contains a tiny magnet and two Hall-effect
+sensors. <br>
+The magnet is free to rotate around its vertical axis and point
+towards north under the influence of the earth magnetic field. <br>
+The two Hall-effect sensors are mounted around the tiny magnet,
+90° apart each other. When the magnet rotates the outputs of the
+two sensors describe a couple of sine and cosine curves that,
+using a power supply of 5 volts, have an average value of 2.5
+volts and swing between 2.8 and 3.2 volts. <br>
+The Roboat azimuth can then be computed as the ArcTangent of the
+ratio between the displacements of the two curves from the
+average. </small></p>
+
+<p style="font-family: Verdana;"><small><img src="sinecosine.gif" height="425" width="843"> <br>
+&nbsp; </small></p>
+
+<p style="font-family: Verdana;"><small><a name="Proportional servo"></a><b><u>Proportional Servo</u></b>
+</small></p>
+
+<p style="font-family: Verdana;"><small>The rudder is controlled by a Proportional Servo by Futaba. <br>
+The servo wheel turns in a range of +/-90° from its central
+position, under control of a periodic positive pulse and the
+amount of rotation of the wheel is proportional to the pulse
+width. <br>
+The pulse is generated at pin_4 of Port_D, under control of Timer_1
+which is set in PWM (Pulse Width Modulation) mode. <br>
+&nbsp; </small></p>
+
+<small>
+    </small><small>
+        </small><small>
+        </small><small>
+        </small><small>
+        </small><small>
+    </small><small>
+    </small><small>
+        </small><small>
+        </small><small>
+        </small><small>
+        </small><small>
+    </small><small>
+    </small><small>
+        </small><small>
+        </small><small>
+        </small><small>
+        </small><small>
+    </small><small>
+    </small><small>
+        </small><small>
+        </small><small>
+        </small><small>
+        </small><small>
+    </small><small>
+</small><table style="font-family: Verdana;" border="1" cols="4" width="100%"><tbody><tr><td><small><b>Rudder position</b> </small></td><td><small><b>Servo wheel rotation</b> </small></td><td><small><b>Pulse width (msec)</b> </small></td><td><small><b>value in Timer 1</b> </small></td></tr><tr><td><small>full left </small></td><td><small>-90° </small></td><td><small>0.2 </small></td><td><small>$0200 </small></td></tr><tr><td><small>center </small></td><td><small>central position </small></td><td><small>1.25 </small></td><td><small>$0C00 </small></td></tr><tr><td><small>full right </small></td><td><small>+90° </small></td><td><small>2.3 </small></td><td><small>$1600 </small></td></tr></tbody></table>
+
+<hr style="font-family: Verdana;">
+
+<p style="font-family: Verdana;"><small><br>
+<a name="Electronic circuit description"></a><b><u>Electronic
+Circuit description.</u></b> </small></p>
+
+<p style="font-family: Verdana;"><small>The electronic circuit receives power from the 12 volts
+battery through the main switch SW1. <br>
+When SW1 is on, the green led D1 lights up to show that power is
+available. </small></p>
+
+<p style="font-family: Verdana;"><small>12 volts are applied directly to the electric motor under
+control of&nbsp; IC4-PTC2, through the buffer IC3f and the
+electronic switch TR1. C11 helps reducing the noise generated by
+the motor when in use. </small></p>
+
+<p style="font-family: Verdana;"><small>The rest of the circuit is powered with 5 volts through the
+voltage regulators IC1-C2 and IC2-C3. <br>
+The reason for using two identical regulators is to insulate the
+servo, so that the noise spikes that it generates are not passed
+to the rest of the circuit. <br>
+Therefore IC2 powers the servo only and IC1 powers the rest. </small></p>
+
+<p style="font-family: Verdana;"><small>IC4 is the core of the circuit. It is the micro-controller M68HC908GP20
+and works with a frequency of 4.9152 MHz generated by the
+oscillator X1, IC3a, R3, C7, C8. <br>
+C4 and C5 are mounted very close to the power supply pins VDD and
+VDDA, to prevent noise problems. <br>
+A stronger filter for the pin VDDAD is provided by R4 and C6, in
+order to prevent noise that might affect the AD conversion. <br>
+SW2 and C7 provide the manual reset to IC4. </small></p>
+
+<p style="font-family: Verdana;"><small>The pins IRQ, RST, PTA0,7, and PTC0,1,3 of IC4 are connected
+to the MON08 connector that provides a link, via a 16 ways flat
+cable, with the ICS08GP20 board, in order to control "Roboat"
+directly from a PC for testing purpose and when new waypoints
+coordinates are to be loaded. <br>
+When the link is not in use (i.e. when "Roboat" is
+sailing autonomously) a suitable socket is to be fitted to the
+connector instead of the flat cable </small></p>
+
+<p style="font-family: Verdana;"><small>IC4-PTD4 pin generates the PWM signal that controls the servo.
+It is connected to the control input of the servo through the
+buffer IC3b. </small></p>
+
+<p style="font-family: Verdana;"><small>IC4-PTE1 pin receives the serial signal from the GPS after it
+has been inverted by IC3d. <br>
+IC4-PTC4 pin controls the GPS power down mode through the buffer
+IC3e. <br>
+IC4-PTD6 controls the red LED D2 through the buffer IC3c and lets
+it flash every time the GPS receives a valid position. </small></p>
+
+<p style="font-family: Verdana;"><small>The digital compass analog outputs as well as R8 (the trimmer
+for centering the rudder) are connected to the AD converter
+inputs of IC4 (pins AD0, AD1, AD2), through the low pass filters
+R5-C10, R6-C11, R7-C12. </small></p>
+
+<p style="font-family: Verdana;"><small>Here is the schematics of the electronic circuit: <br>
+<img src="schema.gif" border="1" height="575" width="970"> <br>
+&nbsp; </small></p>
+
+<p style="font-family: Verdana;"><small><a name="PCB layout"></a>Here are displays of the PCB layout: </small></p>
+
+<small>
+    </small><small>
+        </small><small>
+    </small><small>
+</small><table style="font-family: Verdana;" border="1" cols="1" width="92%"><tbody><tr><td><small><img src="pcb_main.gif" height="570" width="908"> </small><small>
+            </small><small>
+                </small><small>
+                </small><small>
+            </small><small>
+        </small><table border="1" cols="2" width="100%"><tbody><tr><td><small><img src="pcb_micro.gif" height="365" width="310"></small></td></tr></tbody></table><small>
+        </small></td></tr></tbody></table>
+
+<p><small><a style="font-family: Verdana;" name="Electronic parts list"></a><span style="font-family: Verdana;">Parts List:</span> </small></p>
+
+<p><tt>Resistors:</tt> <br>
+<tt>· R1 560 W</tt> <br>
+<tt>· R2 100 W</tt> <br>
+<tt>· R3&nbsp;&nbsp; 1 MW</tt> <br>
+<tt>· R4&nbsp;&nbsp; 1 KW</tt> <br>
+<tt>· R5-7&nbsp; 10 KW</tt> <br>
+<tt>· R8&nbsp; 10 KW potentiometer</tt> <br>
+<tt>· R9&nbsp;&nbsp; 1 KW</tt> </p>
+
+<p><tt>Capacitors:</tt> <br>
+<tt>· C1-3 500 uF electrolytic</tt> <br>
+<tt>· C4-5 100 nF</tt> <br>
+<tt>· C6&nbsp;&nbsp; 1 uF electrolytic</tt> <br>
+<tt>· C7-8&nbsp; 18 pF</tt> <br>
+<tt>· C9&nbsp;&nbsp; 1 uF electrolytic</tt> <br>
+<tt>· C10-11&nbsp; 10 nF</tt> <br>
+<tt>· C11&nbsp; 22 nF</tt> </p>
+
+<p><tt>Semiconductors:</tt> <br>
+<tt>· D1 LED diode green</tt> <br>
+<tt>· D2 LED diode red</tt> <br>
+<tt>· TR1 TIP122</tt> <br>
+<tt>· IC1-2 LM7805 &amp; heatsink</tt> <br>
+<tt>· IC3 HC4049</tt> <br>
+<tt>· IC4 </tt><tt>MC68HC908GP20CFB</tt>
+</p>
+
+<p><tt>Switches:</tt> <br>
+<tt>· SW1 PCB mounting vertical type (SPDT)</tt> <br>
+<tt>· SW2-3 PCB mounting push type (SPST)</tt> <br>
+<tt>· SW4-5 PCB mounting slide type (SPDT)</tt> </p>
+
+<p><tt>Other:</tt> <br>
+<tt>· X1 - crystal 4.9152 MHz</tt> <br>
+<tt>· GPS - </tt><tt>Garmin
+mod. GPS25-LVS</tt><tt> &amp; antenna mod. GA27A</tt> <br>
+<tt>· COMPASS SENSOR ANALOG - </tt><a href="mailto:pewatron@access.ch"><tt>PEWATRON</tt></a><tt> mod.
+6100</tt> <br>
+<tt>· PROPORTIONAL SERVO - FUTABA mod. FP-S148</tt> <br>
+<tt>· ELECTRIC MOTOR - brushed 12 V d.c.</tt> <br>
+<tt>· BATTERY - sealed lead-acid, 12 V, 1.2 AH</tt> </p>
+
+<p><tt>Connectors and sockets:</tt> <br>
+<tt>· K1 (battery) PCB mounted screw terminals, 2 ways</tt> <br>
+<tt>· K2 (motor) PCB mounted screw terminals, 2 ways</tt> <br>
+<tt>· K3 (servo) single row PCB headers, 3 ways, right angle</tt>
+<br>
+<tt>· K4 (GPS) double row PCB headers, 10 ways, straight</tt> <br>
+<tt>· COMPASS two s.i.l. sockets, 3 ways</tt> <br>
+<tt>· MON08 double row PCB headers, 16 ways, straight</tt> <br>
+<tt>· MON08 double row PCB socket, 16 ways</tt> <br>
+<tt>· IC3 d.i.l. socket, 16 ways</tt> <br>
+<tt>· IC4 two single row PCB headers, 22 ways each, straight</tt>
+<br>
+<tt>· IC4 two single row PCB sockets, 22 ways each</tt> </p>
+
+<hr>
+
+<p><br>
+<a name="Software"></a><b><u>&nbsp;<small><span style="font-family: Verdana;">Software</span></small></u></b> </p>
+
+<p style="font-family: Verdana;"><small>The software is written in assembler for the M68HC908GP20 and
+controls all the functions of "Roboat". The main
+actions are: <br>
+· start the propeller and power up GPS <br>
+· acquire data from GPS <br>
+· compute Roboat present position <br>
+· compute the course needed to reach the next waypoint <br>
+· acquire data from the Digital Compass <br>
+· compute Roboat present course <br>
+· compute course correction in order to head towards the next
+waypoint <br>
+· apply course correction to the rudder <br>
+· when the waypoint is close enough, select the next one and
+head towards it <br>
+· when the last waypoint is reached, stop the propeller, power
+down the GPS and stop the micro-controller </small></p>
+
+<p style="font-family: Verdana;"><small>Because of all the computations with coordinates, big effort
+was put in developing routines in assembler to deal with
+simplified mathematics, in order to handle arithmetic operation
+with four bytes numbers, azimuth angles and the trigonometric
+function ArcTangent. </small></p>
+
+<p style="font-family: Verdana;"><small><a href="roboat.asm">Download
+ASM file</a></small></p>
+
+<hr style="font-family: Verdana;"><p style="font-family: Verdana;"><small><small><font size="4"><small><small>Email:&nbsp;</small></small></font><a href="mailto:riccardo.rocca@hotmail.com"><font size="4"><small><small>riccardo.rocca@hotmail.com</small></small></font></a></small></small></p>
+
+<p><small><small><a style="font-family: Verdana;" href="../index.htm"><font size="4"><small><small>Back to&nbsp;Home Page</small></small></font></a><font style="font-family: Verdana;" size="4"><small><small> </small></small></font></small><br style="font-family: Verdana;"><span style="font-family: Verdana;">
+&nbsp;</span> </small></p>
+</body></html>

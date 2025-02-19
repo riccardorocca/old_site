@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title></title></head>
+
+<body>
+
+<h1 style="font-family: Verdana;" align="center"><u>Penelope: main sensors</u></h1>
+
+<table style="font-family: Verdana;" border="0"><small>
+    </small><tbody><tr><small>
+        </small><td><h3><small>The main sensors of Penelope are arranged on the
+        five boards that are mounted around the robot (on the
+        left, front-left, front, front-right and right sides).</small></h3><small>
+        </small><p><small>Here is a side view of these boards:</small></p><small>
+        </small></td><small>
+        </small><td><small><img src="sideboard.gif" alt="Sensors board - Side view" border="1" height="460" hspace="20" width="290"></small></td><small>
+    </small></tr><small>
+</small></tbody></table>
+
+<ul style="font-family: Verdana;"><small>
+    </small><li><small><u>Sonar:</u> is made of two 40 kHz ultrasonic
+        transducers; one sends a "ping" and the other
+        receives the echo reflected by an obstacle ahead. <br>
+        The distance of this obstacle is estimated by the
+        microcontroller, measuring the time interval between sent
+        and received pulses (sound velocity in dry air is roughly
+        330 m/sec).<br>
+        IC3 generates the output pulse that is boosted by IC4 and
+        transmitted by the ultrasonic transducer U2.<br>
+        The echo is received by U1 and amplified by TR1, IC1a and
+        IC1b. IC2a detects the actual reflections and its
+        sensitivity can be adjusted with R12. IC2b is a low pass
+        filter that finally removes the 40 kHz frequency and
+        outputs a clean digital pulse.<br>
+        A main problem in this device is the direct wave that
+        runs from the emitter directly to the receiver, because
+        it generates a signal that can mask the real echoes. In
+        order to minimize this effect, the following measures
+        have been adopted: </small><ul type="circle"><small>
+            </small><li><small>mount the ultrasonic transmitter and receiver as
+                close as possible, so that the direct wave
+                affects only the very early part of the echoes </small></li><small>
+            </small><li><small>break down the direct wave by adjusting the nylon
+                screw shown in the picture </small></li><small>
+            </small><li><small>reduce IC2a sensitivity during the arrival of the
+                direct wave, through the network R14, D1, R15,
+                R16, C5. </small></li><small>
+        </small></ul><small>
+    </small></li><small>
+</small></ul>
+
+<ul style="font-family: Verdana;"><small>
+    </small><li><small><u>Light sensor:</u> TR1-TR6 are very efficient
+        photo-transistors because they mount a small lens on top
+        of their cases, therefore they are very sensitive to
+        lights placed direcly in front of them and less disturbed
+        by the environmental light.<br>
+        IC5 is a comparator that squares the output and its
+        sensitivity can be adjusted with R23. </small></li><small>
+</small></ul>
+
+<ul style="font-family: Verdana;"><small>
+    </small><li><small><u>Sound sensor:</u> the small microphone is mounted
+        inside a plastic funnel that increases the directional
+        sensitivity.<br>
+        IC6 is a selective 4 kHz filter (the frequency generated
+        by the sound sources during the competition).<br>
+        IC7a is an amplifier and its sensitivity can be adjusted
+        with R32; its gain varies also according to the signal
+        intensity through the network D7, D8, R33, so that the
+        weaker is the signal, the higher is the amplification.<br>
+        Finally, D9 and C15 act as a low pass filter and pass to
+        the last amplifier IC7b a tension that is proportional to
+        the sound intensity. </small></li><small>
+</small></ul>
+
+<p style="font-family: Verdana;" align="left"><small><img src="sensors.gif" alt="Main Sensors - Electronic layout" border="1" height="1000" vspace="30" width="900"> </small></p>
+
+<p style="font-family: Verdana;" align="left"><small><strong><u>Parts list:</u></strong></small></p>
+
+<hr style="font-family: Verdana;">
+
+<p style="font-family: Verdana;" align="left"><small><u>Sonar</u></small></p>
+
+<p align="left"><tt>R1,10,11,13 ... 100 kohm<br>
+R2 ............ 6.8 kohm<br>
+R3 ............ 3.3 kohm<br>
+R4 ............. 27 ohm<br>
+R5 .............. 1 kohm<br>
+R6-8,18-20 ..... 10 kohm<br>
+R9 ............ 3.9 kohm<br>
+R12 ............ 20 kohm - trimmer<br>
+R14 ........... 150 ohm<br>
+R15-17 ......... 33 kohm<br>
+R21 ........... 2.2 kohm<br>
+C1,4 ........... 10 nF<br>
+C2,7 ........... 10 uF - electrolytic<br>
+C3 .............. 1 nF<br>
+C5 ............. 47 nF<br>
+C6 ............ 4.7 nF<br>
+C7 ............ 100 uF - electrolytic<br>
+C8 ............ 1.2 nF<br>
+D1 ............ 1N4149<br>
+TR1 ........... BC109<br>
+IC1 ........... LM358<br>
+IC2 ........... LM393<br>
+IC3 ........... NE555<br>
+IC4 ........... CD4049<br>
+U1 ............ ultrasonic transducer, receiver - 40kHz<br>
+U2 ............ ultrasonic transducer, transmitter - 40kHz<br>
+SCREW ......... nylon screw, 3x20mm </tt></p>
+
+<hr>
+
+<p style="font-family: Verdana;"><small><u>Light Sensor</u></small></p>
+
+<p><tt>R22 ............ 10 Mohm<br>
+R23 ........... 100 kohm - trimmer<br>
+R24 ............. 1 Mohm<br>
+R25 ............ 10 kohm<br>
+C9 ............ 4.7 nF<br>
+D2-6 .......... 1N4148<br>
+TR2-6 ......... TIL81 - NPN phototransistor<br>
+IC5 ........... LM311 </tt></p>
+
+<hr>
+
+<p style="font-family: Verdana;"><small><u>Sound Sensor</u></small></p>
+
+<p><tt>R26 ............ 15 kohm<br>
+R27,36 ......... 12 kohm<br>
+R28 ............ 22 kohm<br>
+R29,30,34,37 ... 10 kohm<br>
+R31,33 .......... 1 kohm<br>
+R32 ........... 200 kohm - trimmer<br>
+R35 ........... 220 kohm<br>
+C10,11 ........ 3.3 nF<br>
+C12,14 ........ 100 nF<br>
+C13 ............ 10 uF - electrolytic<br>
+C15 ........... 470 nF<br>
+D7-8 .......... zener diode - 2.7V - 1/4W<br>
+D9 ............ 1N4148<br>
+IC6 ........... LM741<br>
+IC7 ........... LM358<br>
+MIC ........... electret sub-miniature microphone (inside the
+funnel)<br>
+FUNNEL ........ plastic funnel (mounted through the PCB) </tt></p>
+
+<hr><p style="font-family: Verdana;"><small>Email:&nbsp;<a href="mailto:riccardo.rocca@hotmail.com">riccardo.rocca@hotmail.com</a></small></p>
+
+<p style="font-family: Verdana;"><small><a href="Penelope.htm">Back to Penelope main
+page</a> </small></p>
+</body></html>

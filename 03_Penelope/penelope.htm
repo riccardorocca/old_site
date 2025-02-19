@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title></title></head>
+
+<body>
+
+<h1 style="font-family: Verdana;" align="center"><u>Penelope</u></h1>
+<div style="font-family: Verdana;" align="center"><center>
+
+<table style="width: 344px; height: 138px;" border="0">
+    <tbody><tr>
+        <td><a href="penelope.jpg"><img src="penelopeICON.jpg" alt="Picture of Penelope" height="115" hspace="50" width="93"></a></td>
+        <td><small><a href="penelope.jpg">Click here<br>
+        to download<br>
+        a bigger image<br>
+        of Penelope<br>
+        (48KB)</a></small></td>
+    </tr>
+</tbody></table>
+</center></div>
+
+<p style="font-family: Verdana;"><small>Penelope is a small robot 25 cm high and 20 cm in diameter. I
+had built it in order to take part to a national microrobot
+competition which was held in Pisa (Italy), in April &#8217;93.
+Its aim is to move autonomously, looking for light, sound and gas
+sources, without hitting obstacles. </small></p>
+
+<p style="font-family: Verdana;"><small>It is provided with: </small></p>
+
+<ul style="font-family: Verdana;"><small>
+    </small><li><small>5 sonars and 6 whiskers for obstacle avoidance </small></li><small>
+    </small><li><small>5 groups of directional light sensor, 3 directional
+        microphones with 4kHz filters and one gas sensor for
+        sources searching </small></li><small>
+    </small><li><small>one compass and one odometer (=mileometer) for
+        positioning </small></li><small>
+    </small><li><small>two DC motors for moving </small></li><small>
+    </small><li><small>one 12V lead battery for power supply </small></li><small>
+    </small><li><small>one Motorola micro-controller M68HC11, mounted on the
+        Motorola Evaluation Board (EVB) that provides the user
+        with: </small><ul type="circle"><small>
+            </small><li><small>one 8KB EPROM </small></li><small>
+            </small><li><small>one 8KB RAM </small></li><small>
+            </small><li><small>connection to a PC serial port for debugging </small></li><small>
+        </small></ul><small>
+    </small></li><small>
+</small></ul>
+
+<p style="font-family: Verdana;"><small><a href="sensors.htm">Click here for a detailed description of
+Sonar, Light and Sound sensors.</a> </small></p>
+
+<hr style="font-family: Verdana;">
+
+<p style="font-family: Verdana;"><small>In order to check the numerous sensors and devices of Penelope
+I developed a program in BASIC that communicates with the robot
+via the PC serial port. In this way the robot can be driven with
+the arrow keys of the PC keyboard, while the response of all
+sensors is displayed on the PC screen. <br>
+Here is an example of what can be seen on the PC: </small></p>
+
+<p style="font-family: Verdana;"><small><img src="pentest.gif" alt="Penelope test screen" align="middle" height="480" width="640"> </small></p>
+
+<p style="font-family: Verdana;"><small>The screen is subdivided in three main regions: </small></p>
+
+<ul style="font-family: Verdana;"><small>
+    </small><li><small>a grey square on the right represents the area where the
+        robot is actually moving; <br>
+        the robot path is represented by the light-blue line,
+        which is showing a movement from the center of the square
+        towards the bottom-left corner. <br>
+        In this example are also shown the positions of three
+        sources: </small><ul><small>
+            </small><li><small>light (yellow area) </small></li><small>
+            </small><li><small>sound (green waves) </small></li><small>
+            </small><li><small>gas (red area) </small></li><small>
+        </small></ul><small>
+    </small></li><small>
+    </small><li><small>five columns on the left represent the response of
+        sensors positioned around the robot, from the left, to
+        the front, to the right side: </small><ul><small>
+            </small><li><small>sonars (purple lines: the shorter are the lines,
+                the closer is an obstacle in front of them) </small></li><small>
+            </small><li><small>sound sensors (green lines: the longer are the
+                lines, the stronger is a sound in front of them) </small></li><small>
+            </small><li><small>light sensors (blue circles: filled with yellow
+                when a light hits them) </small></li><small>
+            </small><li><small>gas sensor (red dot at the bottom: it widens when
+                gas is sensed) </small></li><small>
+        </small></ul><small>
+    </small></li><small>
+    </small><li><small>a data area at the bottom shows: </small><ul><small>
+            </small><li><small>direction of movement (forward, backward, left,
+                right) </small></li><small>
+            </small><li><small>speed (0 = stop, 8 = fastest) </small></li><small>
+            </small><li><small>distance measured in steps (1 step = 1.5 cm) </small></li><small>
+            </small><li><small>position in X and Y calculated by the robot
+                itself (0 , 0 is the square center) </small></li><small>
+            </small><li><small>heading according to the compass </small></li><small>
+        </small></ul><small>
+    </small></li><small>
+</small></ul>
+
+<hr style="font-family: Verdana;"><p style="font-family: Verdana;"><small>Email:&nbsp;<a href="mailto:riccardo.rocca@hotmail.com">riccardo.rocca@hotmail.com</a></small></p>
+
+<p style="font-family: Verdana;"><small><a href="../index.htm">Back to&nbsp;Home Page</a>
+</small></p>
+</body></html>
